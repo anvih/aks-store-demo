@@ -1,9 +1,10 @@
 name: patch-container-images
 
-on: push
+on: 
+  push
   #schedule:
   #  - cron: "30 0 * * 2"
-  #workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
   contents: read
