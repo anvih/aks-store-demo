@@ -1,11 +1,13 @@
 name: patch-container-images
-
-on: 
+on:
+  # change these to your preferred event triggers
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
   push:
-  #schedule:
-  #  - cron: "30 0 * * 2"
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
   workflow_dispatch:
-
 permissions:
   contents: read
   packages: write
